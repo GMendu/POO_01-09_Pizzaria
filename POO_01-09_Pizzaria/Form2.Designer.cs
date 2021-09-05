@@ -34,7 +34,7 @@ namespace POO_01_09_Pizzaria
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnBtnExcluir = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ColumnBtnPedido = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnPedido = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,17 +45,15 @@ namespace POO_01_09_Pizzaria
             this.ColumnID,
             this.ColumnNome,
             this.ColumnTelefone,
-            this.ColumnBtnExcluir,
-            this.ColumnBtnPedido});
-            this.dataClientes.Location = new System.Drawing.Point(166, 22);
+            this.ColumnBtnExcluir});
+            this.dataClientes.Location = new System.Drawing.Point(12, 12);
             this.dataClientes.Name = "dataClientes";
             this.dataClientes.RowTemplate.Height = 25;
             this.dataClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataClientes.Size = new System.Drawing.Size(545, 256);
+            this.dataClientes.Size = new System.Drawing.Size(517, 256);
             this.dataClientes.TabIndex = 0;
             this.dataClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ColumnBtnExcluir_Click);
-            this.dataClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ColumnBtnPedido_Click);
-            //
+            // 
             // ColumnID
             // 
             this.ColumnID.HeaderText = "ID Cliente";
@@ -78,18 +76,22 @@ namespace POO_01_09_Pizzaria
             this.ColumnBtnExcluir.Text = "Excluir";
             this.ColumnBtnExcluir.UseColumnTextForButtonValue = true;
             // 
-            // ColumnBtnPedido
+            // btnPedido
             // 
-            this.ColumnBtnPedido.HeaderText = "Pedido";
-            this.ColumnBtnPedido.Name = "ColumnBtnPedido";
-            this.ColumnBtnPedido.Text = "Novo Pedido";
-            this.ColumnBtnPedido.UseColumnTextForButtonValue = true;
+            this.btnPedido.Location = new System.Drawing.Point(12, 274);
+            this.btnPedido.Name = "btnPedido";
+            this.btnPedido.Size = new System.Drawing.Size(517, 23);
+            this.btnPedido.TabIndex = 1;
+            this.btnPedido.Text = "Fazer pedido";
+            this.btnPedido.UseVisualStyleBackColor = true;
+            this.btnPedido.Click += new System.EventHandler(this.btnPedido_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 447);
+            this.ClientSize = new System.Drawing.Size(542, 310);
+            this.Controls.Add(this.btnPedido);
             this.Controls.Add(this.dataClientes);
             this.Name = "Form2";
             this.Text = "Form2";
@@ -104,9 +106,7 @@ namespace POO_01_09_Pizzaria
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTelefone;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnCheck;
-        private System.Windows.Forms.Button btnNovoCadastro;
         private System.Windows.Forms.DataGridViewButtonColumn ColumnBtnExcluir;
-        private System.Windows.Forms.DataGridViewButtonColumn ColumnBtnPedido;
+        private System.Windows.Forms.Button btnPedido;
     }
 }
