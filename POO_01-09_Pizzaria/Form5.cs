@@ -15,5 +15,10 @@ namespace POO_01_09_Pizzaria
             InitializeComponent();
 
         }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+        }
     }
 }

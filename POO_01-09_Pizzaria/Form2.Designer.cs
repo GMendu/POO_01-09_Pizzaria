@@ -34,9 +34,9 @@ namespace POO_01_09_Pizzaria
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnBtnExcluir = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ColumnAtualizar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnPedido = new System.Windows.Forms.Button();
             this.btnCadastro = new System.Windows.Forms.Button();
-            this.ColumnAtualizar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +57,7 @@ namespace POO_01_09_Pizzaria
             this.dataClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataClientes.Size = new System.Drawing.Size(527, 256);
             this.dataClientes.TabIndex = 0;
+            this.dataClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataClientes_CellContentClick);
             // 
             // ColumnID
             // 
@@ -80,6 +81,11 @@ namespace POO_01_09_Pizzaria
             this.ColumnBtnExcluir.Text = "Excluir";
             this.ColumnBtnExcluir.UseColumnTextForButtonValue = true;
             // 
+            // ColumnAtualizar
+            // 
+            this.ColumnAtualizar.HeaderText = "Atualizar";
+            this.ColumnAtualizar.Name = "ColumnAtualizar";
+            // 
             // btnPedido
             // 
             this.btnPedido.Location = new System.Drawing.Point(273, 274);
@@ -99,11 +105,6 @@ namespace POO_01_09_Pizzaria
             this.btnCadastro.Text = "Novo cadastro";
             this.btnCadastro.UseVisualStyleBackColor = true;
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
-            // 
-            // ColumnAtualizar
-            // 
-            this.ColumnAtualizar.HeaderText = "Atualizar";
-            this.ColumnAtualizar.Name = "ColumnAtualizar";
             // 
             // Form2
             // 

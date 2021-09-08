@@ -29,7 +29,7 @@ namespace POO_01_09_Pizzaria
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCadastro = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.txtClienteNum = new System.Windows.Forms.TextBox();
             this.labelClienteNum = new System.Windows.Forms.Label();
             this.txtTelCliente = new System.Windows.Forms.TextBox();
@@ -38,14 +38,15 @@ namespace POO_01_09_Pizzaria
             this.labelNomeC = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnCadastro
+            // btnAtualizar
             // 
-            this.btnCadastro.Location = new System.Drawing.Point(228, 181);
-            this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(75, 23);
-            this.btnCadastro.TabIndex = 20;
-            this.btnCadastro.Text = "Atualizar";
-            this.btnCadastro.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Location = new System.Drawing.Point(228, 181);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnAtualizar.TabIndex = 20;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // txtClienteNum
             // 
@@ -101,7 +102,7 @@ namespace POO_01_09_Pizzaria
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 410);
-            this.Controls.Add(this.btnCadastro);
+            this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.txtClienteNum);
             this.Controls.Add(this.labelClienteNum);
             this.Controls.Add(this.txtTelCliente);
@@ -117,7 +118,7 @@ namespace POO_01_09_Pizzaria
 
         #endregion
 
-        private System.Windows.Forms.Button btnCadastro;
+        private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.TextBox txtClienteNum;
         private System.Windows.Forms.Label labelClienteNum;
         private System.Windows.Forms.TextBox txtTelCliente;

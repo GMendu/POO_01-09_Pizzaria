@@ -39,7 +39,7 @@ namespace POO_01_09_Pizzaria
         //{
         //    if (f5.ShowDialog() == DialogResult.OK)
         //    {
-        //
+        
         //    }
         // }
 
@@ -58,6 +58,24 @@ namespace POO_01_09_Pizzaria
                 {
                     
                     dataClientes.Rows.Add(new object[] { f4.Idezin, f4.Nominho, f4.Telefonim });
+                }
+            }
+        }
+
+        private void dataClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataClientes.CurrentCell.ColumnIndex == 3 && dataClientes.CurrentCell.RowIndex != -1)
+            {
+                dataClientes.Rows.RemoveAt(dataClientes.CurrentCell.RowIndex);
+            }
+            else if (dataClientes.CurrentCell.ColumnIndex == 4 && dataClientes.CurrentCell.RowIndex != -1)
+            {
+                using (Form5 f5 = new Form5())
+                {
+                    if (f5.ShowDialog() == DialogResult.OK)
+                    {
+
+                    }
                 }
             }
         }
