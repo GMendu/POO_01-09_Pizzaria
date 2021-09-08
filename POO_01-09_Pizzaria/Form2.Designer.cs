@@ -35,24 +35,28 @@ namespace POO_01_09_Pizzaria
             this.ColumnTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnBtnExcluir = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnPedido = new System.Windows.Forms.Button();
+            this.btnCadastro = new System.Windows.Forms.Button();
+            this.ColumnAtualizar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // dataClientes
             // 
+            this.dataClientes.AllowUserToAddRows = false;
+            this.dataClientes.AllowUserToDeleteRows = false;
             this.dataClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnID,
             this.ColumnNome,
             this.ColumnTelefone,
-            this.ColumnBtnExcluir});
+            this.ColumnBtnExcluir,
+            this.ColumnAtualizar});
             this.dataClientes.Location = new System.Drawing.Point(12, 12);
             this.dataClientes.Name = "dataClientes";
             this.dataClientes.RowTemplate.Height = 25;
             this.dataClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataClientes.Size = new System.Drawing.Size(517, 256);
+            this.dataClientes.Size = new System.Drawing.Size(527, 256);
             this.dataClientes.TabIndex = 0;
-            this.dataClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ColumnBtnExcluir_Click);
             // 
             // ColumnID
             // 
@@ -78,19 +82,35 @@ namespace POO_01_09_Pizzaria
             // 
             // btnPedido
             // 
-            this.btnPedido.Location = new System.Drawing.Point(12, 274);
+            this.btnPedido.Location = new System.Drawing.Point(273, 274);
             this.btnPedido.Name = "btnPedido";
-            this.btnPedido.Size = new System.Drawing.Size(517, 23);
+            this.btnPedido.Size = new System.Drawing.Size(266, 23);
             this.btnPedido.TabIndex = 1;
             this.btnPedido.Text = "Fazer pedido";
             this.btnPedido.UseVisualStyleBackColor = true;
             this.btnPedido.Click += new System.EventHandler(this.btnPedido_Click);
             // 
+            // btnCadastro
+            // 
+            this.btnCadastro.Location = new System.Drawing.Point(12, 274);
+            this.btnCadastro.Name = "btnCadastro";
+            this.btnCadastro.Size = new System.Drawing.Size(255, 24);
+            this.btnCadastro.TabIndex = 3;
+            this.btnCadastro.Text = "Novo cadastro";
+            this.btnCadastro.UseVisualStyleBackColor = true;
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
+            // 
+            // ColumnAtualizar
+            // 
+            this.ColumnAtualizar.HeaderText = "Atualizar";
+            this.ColumnAtualizar.Name = "ColumnAtualizar";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(542, 310);
+            this.ClientSize = new System.Drawing.Size(551, 310);
+            this.Controls.Add(this.btnCadastro);
             this.Controls.Add(this.btnPedido);
             this.Controls.Add(this.dataClientes);
             this.Name = "Form2";
@@ -108,5 +128,7 @@ namespace POO_01_09_Pizzaria
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTelefone;
         private System.Windows.Forms.DataGridViewButtonColumn ColumnBtnExcluir;
         private System.Windows.Forms.Button btnPedido;
+        private System.Windows.Forms.Button btnCadastro;
+        private System.Windows.Forms.DataGridViewButtonColumn ColumnAtualizar;
     }
 }

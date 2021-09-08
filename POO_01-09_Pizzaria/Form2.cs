@@ -32,10 +32,34 @@ namespace POO_01_09_Pizzaria
             this.Hide();
         }
 
-        private void ColumnBtnExcluir_Click(object sender, DataGridViewCellEventArgs e)
+
+        // dataClientes.Rows.RemoveAt(e.RowIndex);
+
+        //using (Form5 f5 = new Form5())
+        //{
+        //    if (f5.ShowDialog() == DialogResult.OK)
+        //    {
+        //
+        //    }
+        // }
+
+
+        private void btnCadastro_Click(object sender, EventArgs e)
         {
-               dataClientes.Rows.RemoveAt(e.RowIndex);
-        
+            string ultimoid = "0";
+            foreach (DataGridViewRow item in dataClientes.Rows)
+            {
+                if (item.Cells[0].Value != null)
+                    ultimoid = item.Cells[0].Value.ToString();
+            }
+            using (Form4 f4 = new Form4(ultimoid))
+            {
+                if (f4.ShowDialog() == DialogResult.OK)
+                {
+                    
+                    dataClientes.Rows.Add(new object[] { f4.Idezin, f4.Nominho, f4.Telefonim });
+                }
+            }
         }
     }
 }
